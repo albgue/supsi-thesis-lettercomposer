@@ -19,7 +19,7 @@ this.box1 = new fabric.Rect({
   height: 100,
   top: 70,
   left: 120,
-  fill: "blue",
+  fill: "green",
   myType: "box",
   borderColor: "red",
   cornerColor: "red",
@@ -42,7 +42,7 @@ this.box2 = new fabric.Rect({
   height: 200,
   top: 200,
   left: 120,
-  fill: "green",
+  fill: "red",
   myType: "box",
   borderColor: "red",
   cornerColor: "red",
@@ -65,7 +65,7 @@ this.box3 = new fabric.Rect({
   height: 100,
   top: 20,
   left: 400,
-  fill: "yellow",
+  fill: "orange",
   myType: "box",
   borderColor: "red",
   cornerColor: "red",
@@ -127,15 +127,14 @@ var rotateSnaps = [0, 45, 90, 135, 180, 225, 270, 315, 360];
 let hammer = new Hammer.Manager(canvas.upperCanvasEl);
 let pan = new Hammer.Pan();
 let rotate = new Hammer.Rotate();
-//let pinch = new Hammer.Pinch();
+let pinch = new Hammer.Pinch();
 
-hammer.add([pan, rotate]);
-//hammer.get("pinch").set({ enable: true });
+hammer.add([pan, pinch, rotate]);
+hammer.get("pinch").set({ enable: true });
 hammer.get("rotate").set({ enable: true });
 hammer.get("pan").set({ enable: true });
 
-hammer.on("panstart rotatestart", (e) => {
-  //pinchstart removed
+hammer.on("panstart pinchstart rotatestart", (e) => {
   adjustRotation -= e.rotation;
   this.lastX = e.center.x;
   this.lastY = e.center.y;
@@ -403,8 +402,7 @@ function checkRotateSnap(degree, object) {
   return newDegree;
 }
 
-hammer.on("rotatemove", (e) => {
-  //pinchmove removed
+hammer.on("pinchmove rotatemove", (e) => {
   if (canvas.getActiveObject() && e.maxPointers == 2) {
     this.pausePanning = true;
     var object = canvas.getActiveObject();
@@ -486,8 +484,7 @@ hammer.on("rotatemove", (e) => {
   }
 });
 
-hammer.on("panend rotateend", (e) => {
-  //pinchend removed
+hammer.on("panend pinchend rotateend", (e) => {
   this.pausePanning = false;
 
   contextLines.clearRect(0, 0, canvas.width, canvas.height);
