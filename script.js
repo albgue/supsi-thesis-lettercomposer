@@ -14,11 +14,57 @@ canvas.freeDrawingBrush.color = "black";
 
 resizeCanvas();
 
-this.box = new fabric.Rect({
+this.box1 = new fabric.Rect({
   width: 200,
   height: 100,
   top: 70,
   left: 120,
+  fill: "green",
+  myType: "box",
+  borderColor: "red",
+  cornerColor: "red",
+  cornerSize: 10,
+  transparentCorners: false,
+  centeredRotation: true,
+  centeredScaling: true,
+  originX: "center",
+  originY: "center",
+  minScaleLimit: 0.4,
+  //lockUniScaling: true
+  snapAngle: 45,
+  snapThreshold: 10,
+  lockRotation: false,
+  lockDegree: null,
+});
+
+this.box2 = new fabric.Rect({
+  width: 100,
+  height: 200,
+  top: 200,
+  left: 120,
+  fill: "green",
+  myType: "box",
+  borderColor: "red",
+  cornerColor: "red",
+  cornerSize: 10,
+  transparentCorners: false,
+  centeredRotation: true,
+  centeredScaling: true,
+  originX: "center",
+  originY: "center",
+  minScaleLimit: 0.4,
+  //lockUniScaling: true
+  snapAngle: 45,
+  snapThreshold: 10,
+  lockRotation: false,
+  lockDegree: null,
+});
+
+this.box3 = new fabric.Rect({
+  width: 500,
+  height: 100,
+  top: 20,
+  left: 400,
   fill: "green",
   myType: "box",
   borderColor: "red",
@@ -37,7 +83,8 @@ this.box = new fabric.Rect({
   lockDegree: null,
 });
 
-canvas.add(this.box);
+//canvas.add(this.box);
+
 centerObjects();
 
 document.getElementById("toggleDraw").addEventListener(
@@ -633,4 +680,10 @@ function update_info() {
   let info_degree = document.getElementById("info_degree");
 
   //info_adjustRotation.innerHTML = adjustRotation
+}
+
+function createA() {
+  canvas.add(this.box1);
+  canvas.add(this.box2);
+  canvas.add(this.box3);
 }

@@ -61,11 +61,14 @@ canvas {
 button {
   padding: 1em;
   background-color: #333333;
+  font-size: 15px;
   color: white;
   border: 0;
   border-radius: 8px;
   max-width: 300px;
-  margin-bottom: 2em;
+  margin-bottom: 0em;
+
+  height: 100px;
 }
 
 /*
