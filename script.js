@@ -23,7 +23,7 @@ this.box1 = new fabric.Rect({
   myType: "box",
   borderColor: "red",
   cornerColor: "red",
-  cornerSize: 10,
+  cornerSize: 50,
   transparentCorners: false,
   centeredRotation: true,
   centeredScaling: true,
