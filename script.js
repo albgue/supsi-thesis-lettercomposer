@@ -49,7 +49,7 @@ this.box2 = new fabric.Rect({
   cornerSize: 10,
   transparentCorners: false,
   centeredRotation: true,
-  centeredScaling: true,
+  centeredScaling: false,
   originX: "center",
   originY: "center",
   minScaleLimit: 0.4,
@@ -72,7 +72,7 @@ this.box3 = new fabric.Rect({
   cornerSize: 10,
   transparentCorners: false,
   centeredRotation: true,
-  centeredScaling: true,
+  centeredScaling: false,
   originX: "center",
   originY: "center",
   minScaleLimit: 0.4,
@@ -83,13 +83,9 @@ this.box3 = new fabric.Rect({
   lockDegree: null,
 });
 
-function createA() {
-  canvas.add(this.box1);
-  //canvas.add(this.box2);
-  //canvas.add(this.box3);
-}
-
-//canvas.add(this.box1);
+canvas.add(this.box1);
+canvas.add(this.box2);
+canvas.add(this.box3);
 
 //centerObjects();
 
