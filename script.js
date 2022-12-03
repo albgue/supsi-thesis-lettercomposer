@@ -31,7 +31,7 @@ this.box1 = new fabric.Rect({
   originY: "center",
   minScaleLimit: 0.4,
   //lockUniScaling: true
-  snapAngle: 45,
+  //snapAngle: 45,
   snapThreshold: 10,
   lockRotation: false,
   lockDegree: null,
@@ -54,7 +54,7 @@ this.box2 = new fabric.Rect({
   originY: "center",
   minScaleLimit: 0.4,
   //lockUniScaling: true
-  snapAngle: 45,
+  //snapAngle: 45,
   snapThreshold: 10,
   lockRotation: false,
   lockDegree: null,
@@ -65,7 +65,7 @@ this.box3 = new fabric.Rect({
   height: 100,
   top: 20,
   left: 400,
-  fill: "green",
+  fill: "yellow",
   myType: "box",
   borderColor: "red",
   cornerColor: "red",
