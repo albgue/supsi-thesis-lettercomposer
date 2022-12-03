@@ -35,11 +35,14 @@ this.box = new fabric.Rect({
 
 canvas.add(this.box);
 centerObjects();
-/*
-document.getElementById('toggleDraw').addEventListener('click', () => {
-  this.toggleDraw()
-}, false)
-*/
+
+document.getElementById("toggleDraw").addEventListener(
+  "click",
+  () => {
+    this.toggleDraw();
+  },
+  false
+);
 
 // =======================================================
 
@@ -65,20 +68,22 @@ let currentRotation = null;
 var ctx = canvas.getSelectionContext();
 var contextLines = canvas.getSelectionContext();
 var centerLineMargin = 4;
-var centerLineColor = "#3988ad";
-var centerLineWidth = 3;
+var centerLineColor = "red";
+var centerLineWidth = 1;
 
 var rotateSnaps = [0, 45, 90, 135, 180, 225, 270, 315, 360];
 
 let hammer = new Hammer.Manager(canvas.upperCanvasEl);
 let pan = new Hammer.Pan();
 let rotate = new Hammer.Rotate();
+let pinch = new Hammer.Pinch();
 
-hammer.add([pan, rotate]);
+hammer.add([pan, pinch, rotate]);
+hammer.get("pinch").set({ enable: true });
 hammer.get("rotate").set({ enable: true });
 hammer.get("pan").set({ enable: true });
 
-hammer.on("panstart rotatestart", (e) => {
+hammer.on("panstart pinchstart rotatestart", (e) => {
   adjustRotation -= e.rotation;
   this.lastX = e.center.x;
   this.lastY = e.center.y;
@@ -346,7 +351,7 @@ function checkRotateSnap(degree, object) {
   return newDegree;
 }
 
-hammer.on("rotatemove", (e) => {
+hammer.on("pinchmove rotatemove", (e) => {
   if (canvas.getActiveObject() && e.maxPointers == 2) {
     this.pausePanning = true;
     var object = canvas.getActiveObject();
@@ -428,7 +433,7 @@ hammer.on("rotatemove", (e) => {
   }
 });
 
-hammer.on("panends rotateend", (e) => {
+hammer.on("panend pinchend rotateend", (e) => {
   this.pausePanning = false;
 
   contextLines.clearRect(0, 0, canvas.width, canvas.height);
