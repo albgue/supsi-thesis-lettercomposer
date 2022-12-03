@@ -83,9 +83,9 @@ this.box3 = new fabric.Rect({
   lockDegree: null,
 });
 
-canvas.add(this.box1);
+//canvas.add(this.box1);
 
-centerObjects();
+//centerObjects();
 
 document.getElementById("toggleDraw").addEventListener(
   "click",
@@ -682,8 +682,8 @@ function update_info() {
   //info_adjustRotation.innerHTML = adjustRotation
 }
 
-//function createA() {
-//canvas.add(this.box1);
-//canvas.add(this.box2);
-//canvas.add(this.box3);
-//}
+function createA() {
+  canvas.add(this.box1);
+  //canvas.add(this.box2);
+  //canvas.add(this.box3);
+}
