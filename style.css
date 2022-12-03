@@ -1,9 +1,9 @@
 body {
-    padding 0;
-    margin: 0;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 #container {
   flex: 1;
@@ -30,22 +30,19 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-
+/*
 canvas {
-
 }
-
-
+*/
 #info {
-    font-size: 12px;
-    visibility: hidden;
-    position: absolute;
+  font-size: 12px;
+  visibility: hidden;
+  position: absolute;
 }
 
 #info > * {
-    margin: 1em;
+  margin: 1em;
 }
-
 
 #toolbar {
   background-color: lime;
@@ -56,7 +53,7 @@ canvas {
   transition: max-height 1s;
   max-height: 4em;
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 button {
@@ -68,13 +65,12 @@ button {
   max-width: 300px;
   margin-bottom: 2em;
 }
-
+/*
 #toolbar.hide {
-  /* display: none !important; */
-  /*max-height: 0; */
+  display: none !important; 
+  max-height: 0; 
 }
-
-
+*/
 .slideMaxHeight-In {
   animation: slideMaxHeight 1s forwards;
 }
@@ -84,8 +80,11 @@ button {
   animation-direction: reverse;
 }
 
-@keyframes slideMaxHeight
-{
-from {max-height: 0;}
-to   {max-height: 4em;}
+@keyframes slideMaxHeight {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 4em;
+  }
 }
