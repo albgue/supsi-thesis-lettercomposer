@@ -30,7 +30,7 @@ this.box1 = new fabric.Rect({
   originX: "center",
   originY: "center",
   minScaleLimit: 0.4,
-  //lockUniScaling: true
+  lockUniScaling: true,
   //snapAngle: 45,
   snapThreshold: 10,
   lockRotation: false,
@@ -83,7 +83,7 @@ this.box3 = new fabric.Rect({
   lockDegree: null,
 });
 
-//canvas.add(this.box);
+canvas.add(this.box1);
 
 centerObjects();
 
@@ -682,8 +682,8 @@ function update_info() {
   //info_adjustRotation.innerHTML = adjustRotation
 }
 
-function createA() {
-  canvas.add(this.box1);
+//function createA() {
+  //canvas.add(this.box1);
   //canvas.add(this.box2);
   //canvas.add(this.box3);
 }
