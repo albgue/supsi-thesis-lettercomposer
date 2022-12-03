@@ -83,6 +83,12 @@ this.box3 = new fabric.Rect({
   lockDegree: null,
 });
 
+function createA() {
+  canvas.add(this.box1);
+  //canvas.add(this.box2);
+  //canvas.add(this.box3);
+}
+
 //canvas.add(this.box1);
 
 //centerObjects();
@@ -680,10 +686,4 @@ function update_info() {
   let info_degree = document.getElementById("info_degree");
 
   //info_adjustRotation.innerHTML = adjustRotation
-}
-
-function createA() {
-  canvas.add(this.box1);
-  //canvas.add(this.box2);
-  //canvas.add(this.box3);
 }
