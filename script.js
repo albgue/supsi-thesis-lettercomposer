@@ -19,7 +19,7 @@ this.box1 = new fabric.Rect({
   height: 100,
   top: 70,
   left: 120,
-  fill: "green",
+  fill: "blue",
   myType: "box",
   borderColor: "red",
   cornerColor: "red",
