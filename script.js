@@ -73,10 +73,10 @@ var rotateSnaps = [0, 45, 90, 135, 180, 225, 270, 315, 360];
 let hammer = new Hammer.Manager(canvas.upperCanvasEl);
 let pan = new Hammer.Pan();
 let rotate = new Hammer.Rotate();
-let pinch = new Hammer.Pinch();
+// let pinch = new Hammer.Pinch();
 
 hammer.add([pan, pinch, rotate]);
-hammer.get("pinch").set({ enable: true });
+// hammer.get("pinch").set({ enable: true });
 hammer.get("rotate").set({ enable: true });
 hammer.get("pan").set({ enable: true });
 
