@@ -684,6 +684,6 @@ function update_info() {
 
 function createA() {
   canvas.add(this.box1);
-  canvas.add(this.box2);
-  canvas.add(this.box3);
+  //canvas.add(this.box2);
+  //canvas.add(this.box3);
 }
