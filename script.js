@@ -19,7 +19,7 @@ this.box = new fabric.Rect({
   height: 100,
   top: 70,
   left: 120,
-  fill: "blue",
+  fill: "green",
   myType: "box",
   centeredRotation: true,
   centeredScaling: true,
@@ -27,7 +27,7 @@ this.box = new fabric.Rect({
   originY: "center",
   minScaleLimit: 0.4,
   //lockUniScaling: true
-  snapAngle: 45,
+  //snapAngle: 45,
   snapThreshold: 10,
   lockRotation: false,
   lockDegree: null,
