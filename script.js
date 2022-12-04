@@ -16,9 +16,9 @@ resizeCanvas();
 
 this.box1 = new fabric.Rect({
   width: 100,
-  height: 300,
-  top: 400,
-  left: 200,
+  height: 400,
+  top: 100,
+  left: 300,
   fill: "blue",
   myType: "box",
   borderColor: "red",
@@ -41,9 +41,9 @@ this.box1 = new fabric.Rect({
 
 this.box2 = new fabric.Rect({
   width: 100,
-  height: 300,
-  top: 500,
-  left: 120,
+  height: 400,
+  top: 200,
+  left: 100,
   fill: "blue",
   myType: "box",
   borderColor: "red",
