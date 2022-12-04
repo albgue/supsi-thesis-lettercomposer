@@ -35,6 +35,8 @@ this.box1 = new fabric.Rect({
   snapThreshold: 10,
   lockRotation: false,
   lockDegree: null,
+  rx: 10,
+  ry: 10,
 });
 
 this.box2 = new fabric.Rect({
